@@ -6,12 +6,23 @@
 
 .container{
   /* 지역 변수 정의 */
-  --secondary-color: #c76e9a;
+  /* --secondary-color: #c76e9a; */
   
   /* --secondary-color 속성이 없을 때 대안으로 #2ecc71가 적용되도록 설정 */
   h1{
-    background-color: var(--secondary-color, #2ecc71);
+    background-color: var(--primary-color, #2ecc71);
   }
+}
+
+/* 전역 변수 정의 */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+}
+
+
+p{
+  background-color: var(--primary-color);
 }
 
 
