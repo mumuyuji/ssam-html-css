@@ -16,20 +16,29 @@
   --large: 1.125rem;
 }
 .wrapper{
-  button.small{
-  font-size: var(--small)  
+  button{
+    font-size: var(--font-size, 1rem);
+    background-color: var(--bg-color, #fff);
+    color: var(--text-color, #000);
   }
 
-  button.medium{
-  font-size: var(--medium)
+  button.open{
+  --font-size: var(--small);
+  --bg-color: var(--green);
+  --text-color: var(--red);
   }
 
-  button.default{
-  font-size: var(--default)
+  button.close{
+    --font-size: var(--default);
   }
 
-  button.large{
-  font-size: var(--large)
+  button.popup{
+    --text-color: var(--blue);
+
+  }
+
+  button.info{
+    --bg-color: var(--white);
   }
 }
 
