@@ -2,6 +2,12 @@
 :root {
   --primary-color: #3498db;
   --secondary-color: #2ecc71;
+
+  --white: #fff;
+  --black: #000;
+  --red: #f00;
+  --green: #0f0;
+  --blue: #00f;
 }
 
 .container{
@@ -13,13 +19,6 @@
     background-color: var(--primary-color, #2ecc71);
   }
 }
-
-/* 전역 변수 정의 */
-:root {
-  --primary-color: #3498db;
-  --secondary-color: #2ecc71;
-}
-
 
 p{
   background-color: var(--primary-color);
