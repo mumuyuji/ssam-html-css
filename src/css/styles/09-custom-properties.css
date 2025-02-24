@@ -31,6 +31,26 @@
   --text12: 0.75rem;
 }
 
+.lion{
+  color: red;
+  border: 1px solid green;
+  padding: 0.5em;
+
+  .parent{
+    padding: inherit;
+    margin: 0;
+
+    .child{
+      color: black;
+      border: 1px solid blue;
+      border-color: blue;
+      padding: inherit;
+      display: inline-block;
+    }
+  }
+
+}
+
 .container{
   color: var(--text-color);
 
