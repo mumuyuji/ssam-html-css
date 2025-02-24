@@ -1,4 +1,10 @@
 /* 전역 변수 정의 */
+@property --text-color{
+  syntax: "<color>";
+  inherits: false;
+  initial-value: orange;
+}
+
 :root {
   /* 색상 팔레트 */
   --white: #fff;
@@ -23,6 +29,18 @@
   --large: 1.125rem;
 
   --text12: 0.75rem;
+}
+
+.container{
+  color: var(--text-color);
+
+  .parent{
+    --text-color: blue;
+
+    .child{
+      color: var(--text-color);
+    }
+  }
 }
 
 .wrapper{
