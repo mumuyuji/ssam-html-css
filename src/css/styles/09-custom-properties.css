@@ -34,7 +34,7 @@
 .lion{
   color: red;
   border: 1px solid green;
-  padding: 0.5em;
+
 
   .parent{
     padding: inherit;
