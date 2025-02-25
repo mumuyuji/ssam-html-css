@@ -1,3 +1,19 @@
+/* 스타일 초기화 */
+body *, body *::before, body *::after {
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, li{
+  list-style: none;
+  padding-left: 0;
+}
+
+
 body{
   font-family: "SUIT", sans-serif;
 }
@@ -5,9 +21,90 @@ body{
 /* 멤버 서비스 */
 .member-service{
   background: yellow;
+  display: flow-root;
+
+  a{
+    /* background: lime; */
+    float: left;
+    text-transform: uppercase;
+  }
+
+  a:nth-child(n+2)::before{
+    content:"|";
+    margin: 0 0.5em;
+  }
 }
 
 /* 멤버 링크 */
 .member-link{
-  background: pink;
+  border:1px solid red;
+  display: flow-root;
+
+  li{
+    background: skyblue;
+    float: left;
+
+    span{
+      background: pink;
+      float: left;
+      margin: 0 0.5em;
+    }
+
+    a{
+      background: orange;
+      float:left;
+      text-transform: uppercase;
+    }
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 멤버 서비스 */
+/* .member-service{
+  background: yellow;
+  display: flow-root;
+  
+  a{
+    background: lime;
+    float: left;
+    padding: 0.25em;
+    text-transform: uppercase;
+
+    &:nth-child(n+2)::before{
+      content: "|";
+      padding-right: 0.5em;
+    }
+  }
+} */
+
+/* 멤버 링크 */
+/* .member-link{
+  background: pink;
+
+  li{
+    background: orange;
+    float: left;
+  
+    span{
+      float:left;
+    }
+
+    a{
+      text-transform: uppercase;
+      float: left;
+      padding: 0 0.5em;
+    }
+  }
+} */
