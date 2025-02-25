@@ -1,8 +1,10 @@
 @import "/src/common/theme.css";
-
+body{
+  margin: 100px;
+}
 /* CSS의 display 속성으로 특정 영역 보이지 않도록 설정 */
 /* .mon-friend-son{
-  display: none;
+  di   height: 212px;splay: none;
 } */
 
 /* float 사용하기 */
@@ -12,10 +14,14 @@
 
   .thumbnail{
     background: var(--pastel-yellow);
-    /* float 요소의 부모에 직접 높이를 지정해서 일반 흐름을 벗어난 이미지가 다음 콘텐츠 영역 레이아웃에 영향을 주는 것을 피할 수 있음. */
-    height: 141px;
-    
+    /* float으로 인해 부모 요소인 thumbnail이 인식하지 못하는 높이를 포함하도록 BFC를 생성 */
+    /* overflow: hidden; */
+    display: flow-root;
+
     img{
+      /* position: relative;
+      right: -50px;
+      top: -50px; */
       float: left;
       width: 100px;
       vertical-align: middle;
@@ -29,6 +35,9 @@
   }
 
   .content{
+    /* float 효과를 해제하기 위해 clear 속성을 사용할 수 있다. */
+    /* clear속성은 반드시 block 성향을 가지는 요소에만 지정할 수 있다. */
+    clear: both;
     background: var(--pastel-orange);
   }
 
