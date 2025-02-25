@@ -16,7 +16,10 @@ body{
     background: var(--pastel-yellow);
     /* float으로 인해 부모 요소인 thumbnail이 인식하지 못하는 높이를 포함하도록 BFC를 생성 */
     /* overflow: hidden; */
+    /* width: 100%; */
+    /* float: left; */
     display: flow-root;
+    border: 1px solid red;
 
     img{
       /* position: relative;
