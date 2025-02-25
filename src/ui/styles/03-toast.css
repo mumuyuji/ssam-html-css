@@ -31,13 +31,14 @@ h1{
 .container{
   display: flex;
   flex-flow: column nowrap;
-  gap: 20px;
+  gap: var(--spacing-20);
 }
 
-/* 알림 */
-.notification{
+/* 토스트 UI */
+.toast{
   --border-color: var(--silver);
   --text-color: var(--silver);
+  --gap: var(--spacing-10);
   --base-spacing: var(--spacing-20);
   --large-spacing: var(--spacing-70);
 
@@ -48,32 +49,34 @@ h1{
   padding: var(--base-spacing) var(--base-spacing) var(--base-spacing) var(--large-spacing);
   margin-top: var(--base-gap);
   
-  .notification-subject{
+  h2, strong{
     font-size: var(--large);
   }
 
-  .notification-time{
+  time{
     font-size: var(--small);
     position: absolute;
     top: var(--base-spacing);
     right: var(--base-spacing);
   }
 
-  .notification-content{
+  p{
     font-size: var(--medium);
-    margin-top: var(--base-gap);
+    margin-top: var(--gap);
   }
 
-  &.green{
+  &.plant-care{
     background-image: url(/src/assets/svg/pot.svg);
-    .notification-subject, .notification-time{
+    
+    h2, strong, time{
       color: var(--green);
     }
   }
 
-  &.brown{
+  &.mealtime {
     background-image: url(/src/assets/svg/rice.svg);
-    .notification-subject, .notification-time{
+    
+    h2, strong, time{
       color: var(--brown);
     }
   }
